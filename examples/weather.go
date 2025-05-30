@@ -1,10 +1,3 @@
-# go-openai-tools
-
-This is a helper library intended to be used with [sashabaranov/go-openai](https://github.com/sashabaranov/go-openai).
-
-## Example
-
-```go
 package main
 
 import (
@@ -76,4 +69,3 @@ func main() {
 
 	fmt.Printf("Final response: %s\n", resp.Choices[0].Message.Content)
 }
-```
