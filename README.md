@@ -1,6 +1,12 @@
 # go-openai-tools
 
-This is a helper library intended to be used with [sashabaranov/go-openai](https://github.com/sashabaranov/go-openai).
+This is a library to make tool definition and tool calls easy. The library is intended to be used with [sashabaranov/go-openai](https://github.com/sashabaranov/go-openai).
+
+## Installation
+
+```go
+go get -u github.com/southball/go-openai-tools
+```
 
 ## Example
 
