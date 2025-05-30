@@ -8,6 +8,7 @@ import (
 	"github.com/sashabaranov/go-openai"
 )
 
+// Handles a single [openai.ToolCall] using the provided [Tool].
 func HandleToolCall(tool Tool, toolCall openai.ToolCall) (openai.ChatCompletionMessage, error) {
 	emptyRequest := reflect.New(tool.RequestType())
 	err := json.Unmarshal([]byte(toolCall.Function.Arguments), emptyRequest.Interface())

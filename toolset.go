@@ -9,11 +9,13 @@ import (
 	"github.com/sashabaranov/go-openai"
 )
 
+// A collection of [Tool].
 type ToolSet struct {
 	tools       map[string]Tool
 	openaiTools []openai.Tool
 }
 
+// Construct a [ToolSet] from the given list of [Tool].
 func NewToolSet(toolset ...Tool) (*ToolSet, error) {
 	tools := make(map[string]Tool, len(toolset))
 	for _, tool := range toolset {
@@ -35,6 +37,7 @@ func NewToolSet(toolset ...Tool) (*ToolSet, error) {
 	return &ToolSet{tools, openAITools}, nil
 }
 
+// Process a list of [openai.ToolCall] and return a list of [openai.ChatCompletionMessage] corresponding to the results of those calls.
 func (t ToolSet) HandleToolCalls(
 	ctx context.Context,
 	toolCalls []openai.ToolCall,
@@ -82,6 +85,7 @@ func (t ToolSet) HandleToolCalls(
 	return messages, errors.Join(errs...)
 }
 
+// Get a list of [openai.Tool] from the [ToolSet].
 func (t ToolSet) OpenAITools() []openai.Tool {
 	return t.openaiTools
 }

@@ -11,6 +11,7 @@ type typedTool[U, V any] interface {
 	CallFunction(args U) (V, error)
 }
 
+// A [Tool] is an interface that can be used to derive an [openai.Tool] and also handle [openai.ToolCall].
 type Tool interface {
 	// Name of the tool.
 	Name() string
