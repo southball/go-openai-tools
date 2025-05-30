@@ -1,10 +1,12 @@
 # go-openai-tools
 
+[![Go Reference](https://pkg.go.dev/badge/southball/go-openai-tools.svg)](https://pkg.go.dev/southball/go-openai-tools) [![CI](https://github.com/southball/go-openai-tools/actions/workflows/ci.yaml/badge.svg)](https://github.com/southball/go-openai-tools/actions/workflows/ci.yaml)
+
 This is a library to make tool definition and tool calls easy. The library is intended to be used with [sashabaranov/go-openai](https://github.com/sashabaranov/go-openai).
 
 ## Installation
 
-```go
+```sh
 go get -u github.com/southball/go-openai-tools
 ```
 
